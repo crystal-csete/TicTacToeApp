@@ -6,7 +6,7 @@ import { winning_combos } from "./WinningCombo";
 
 function App() {
   const [board, setBoard] = useState(["", "", "", "", "", "", "", "", ""]);
-  const [player_turn, setPlayer_turn] = useState("❌");
+  const [player_turn, setPlayer_turn] = useState("⭕");
   const [results, setResults] = useState({ winner: "None", state: "None" });
 
   useEffect(() => {
@@ -18,6 +18,7 @@ function App() {
     } else {
       setPlayer_turn("❌");
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [board]);
 
   useEffect(() => {
@@ -78,9 +79,9 @@ function App() {
     <div className='app__container'>
       <h1>Tic Tac Toe</h1>
       <div className='board'>
-        {board.map((square, index) => {
+        {board.map((square, index, board) => {
           return (
-            <div onClick={() => pickSquare(index)} className='square'>
+            <div onClick={() => pickSquare(index, board)} className='square'>
               <h3 className='symbol'>{square}</h3>
             </div>
           );
