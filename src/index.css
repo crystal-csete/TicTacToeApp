@@ -7,21 +7,50 @@
 }
 
 .app__container {
+  min-height: 100vh;
+  height: 100%;
+  width: 100vw;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("https://images.unsplash.com/photo-1602632003094-0494b73b7c4a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDN8fGdhbWVzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1 {
+  text-align: start;
+  margin-bottom: 4rem;
+  border-bottom: 1px solid #fff;
+  padding: 2rem;
+  width: 100%;
+  background-color: #000;
+  color: #fff;
 }
 
 .board {
-  width: 31rem;
-  height: 31rem;
+  width: 36rem;
+  height: 36rem;
   margin: auto;
   border: 1px solid #000;
+  background-color: #000;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding: 1rem;
 }
 
 .square {
   width: 10rem;
   height: 10rem;
-  border: 1px solid #000;
+  border: 2px solid rgb(122, 112, 112);
+  background-color: #fff;
+  color: #000;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -29,11 +58,22 @@
 }
 
 .square:hover {
-  background-color: lightblue;
+  background-color: #000;
+  color: #fff;
   cursor: pointer;
 }
 
 .symbol {
   font-size: 3rem;
   text-align: center;
+}
+
+footer {
+  text-align: center;
+  border-top: 1px solid #fff;
+  font-size: 2rem;
+  padding: 1rem;
+  width: 100%;
+  background-color: #000;
+  color: #fff;
 }
