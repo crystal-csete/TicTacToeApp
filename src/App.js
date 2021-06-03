@@ -7,7 +7,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      player_turn: "X",
+      player_turn: "❌",
       board: ["", "", "", "", "", "", "", "", ""],
     };
 
@@ -40,9 +40,10 @@ class App extends Component {
       if (board[p1] === board[p2] && board[p2] && board[p3] === board[p1]) {
         alert(`Winner: player ${player_turn} has won the game`);
       }
+      // console.log(`Winner: player ${player_turn} has won the game`);
     }
 
-    player_turn = player_turn === "X" ? "O" : "X";
+    player_turn = player_turn === "❌" ? "⭕" : "❌";
     // console.log("player_turn", player_turn);
     this.setState({
       player_turn: player_turn,
@@ -63,6 +64,7 @@ class App extends Component {
             );
           })}
         </div>
+        <footer>Crystal's Pages &#0169; 2021</footer>
       </div>
     );
   }
